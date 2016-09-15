@@ -27,7 +27,6 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += new Vector3(0.5f, 0.0f, 0.0f);
         bool down = Input.GetKeyDown(KeyCode.Space);
         rb.AddForce(gravity);
         if (down && canJump)
