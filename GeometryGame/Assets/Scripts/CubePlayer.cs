@@ -27,6 +27,13 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD:GeometryGame/Assets/Scripts/CubePlayer.cs
+=======
+<<<<<<< HEAD
+        transform.position += new Vector3(0.10f, 0.0f, 0.0f);
+=======
+        transform.position += new Vector3(0.5f, 0.0f, 0.0f);
+>>>>>>> origin/develop:GeometryGame/Assets/Scripts/Player.cs
         bool down = Input.GetKeyDown(KeyCode.Space);
         rb.AddForce(gravity);
         if (down && canJump)
@@ -35,5 +42,6 @@ public class Player : MonoBehaviour {
             rb.AddForce(jumpForce * coefJump, ForceMode.Impulse);
             rb.AddTorque(transform.forward * -rotateForce);
         }
+>>>>>>> b1db144263a9a4fc7952febdb205004c760c3349
 	}
 }
