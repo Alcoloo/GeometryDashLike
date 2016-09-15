@@ -11,6 +11,6 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += new Vector3(0.8f, 0.0f, 0.0f);
+        transform.position += new Vector3(0.10f, 0.0f, 0.0f);
 	}
 }
