@@ -27,7 +27,7 @@ public class SpherePlayer : MonoBehaviour {
         if (col.gameObject.tag == "Floor")
         {
             canJump = true;
-            if(jumped)rb.AddForce(bouncing*1.5f, ForceMode.VelocityChange);
+            if(jumped)rb.AddForce(bouncing*1.1f, ForceMode.VelocityChange);
             else rb.AddForce(bouncing, ForceMode.VelocityChange);
             jumped = false;
         }
