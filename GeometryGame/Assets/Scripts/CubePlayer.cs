@@ -16,6 +16,8 @@ public class CubePlayer : MonoBehaviour {
 
     public float coefJump;
 
+    public GameObject parent;
+
 	void Start () {
         rb = GetComponent<Rigidbody>();
 	}
@@ -27,6 +29,7 @@ public class CubePlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        transform.position = new Vector3 (parent.transform.position.x,transform.position.y,transform.position.z);
         bool down = Input.GetKeyDown(KeyCode.Space);
         rb.AddForce(gravity);
         if (down && canJump)
@@ -35,5 +38,5 @@ public class CubePlayer : MonoBehaviour {
             rb.AddForce(jumpForce * coefJump, ForceMode.Impulse);
             rb.AddTorque(transform.forward * -rotateForce);
         }
-	}
+    }
 }

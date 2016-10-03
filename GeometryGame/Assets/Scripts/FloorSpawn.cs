@@ -9,44 +9,65 @@ public class FloorSpawn : MonoBehaviour {
     private float posPlayer;
 	private float randomFloorPos;
     public GameObject floor;
+    private GameObject newFloor;
+    public float scrollingSpeed;
+    public float deltaTime;
 	void Start () {
         lastChild = GameObject.FindWithTag("LastChildStart");
         lastChildPosition = lastChild.transform.position;
         posPlayer = GameObject.FindWithTag("Player").transform.position.x;
-	}
+        deltaTime = 8.0f/(scrollingSpeed*60);
+        StartCoroutine(DoSpawn());
+    }
 	
-	// Update is called once per frame
+    void Update()
+    {
+        transform.position -= new Vector3(scrollingSpeed, 0, 0);
+    }
+
 	void FixedUpdate () {
         posPlayer = GameObject.FindWithTag("Player").transform.position.x;
-        if(lastChildPosition.x - 50.0f <= posPlayer)
+    }
+
+    public IEnumerator DoSpawn()
+    {
+        while (true)
         {
-			FloorRandomSpawn (); 
+            yield return new WaitForSeconds(deltaTime);
+            FloorRandomSpawn();
         }
-	}
+    }
+    
 
 	void FloorRandomSpawn()
 	{
 		randomFloorPos = Mathf.Floor(Random.Range (0, 3));
 		if(randomFloorPos == 0)
 		{
-			floor.transform.position = new Vector3(lastChildPosition.x + 8.0f, 20.0f, 0.0f);
-			GameObject.Instantiate(floor);
-		}
+			
+            newFloor = GameObject.Instantiate(floor);
+            newFloor.transform.parent = transform;
+            newFloor.transform.position = new Vector3(48.0f, 20.0f, 0.0f);
+
+        }
 		else if(randomFloorPos == 1)
 		{
-			floor.transform.position = new Vector3(lastChildPosition.x + 8.0f, -20.0f, 0.0f);
-			GameObject.Instantiate(floor);
-		}
+			
+            newFloor = GameObject.Instantiate(floor);
+            newFloor.transform.parent = transform;
+            newFloor.transform.position = new Vector3(48.0f, -20.0f, 0.0f);
+        }
 		else 
 		{
-			floor.transform.position = new Vector3(lastChildPosition.x + 8.0f, 1.0f, -20.0f);
-			GameObject.Instantiate(floor);
-		}
+			
+            newFloor = GameObject.Instantiate(floor);
+            newFloor.transform.parent = transform;
+            newFloor.transform.position = new Vector3(48.0f, 1.0f, -20.0f);
+        }
+		lastChild = newFloor;
+		lastChildPosition = newFloor.transform.position;
 
-		lastChild = floor;
-		lastChildPosition = lastChild.transform.position;
-
-	}
+    }
 		
 		
 		

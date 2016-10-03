@@ -11,6 +11,7 @@ public class PlanesPlayer : MonoBehaviour {
     public Vector3 gravity = new Vector3(0.0f, -5f, 0.0f);
 
     public float coefJump;
+    
     void Start () {
         rb = GetComponent<Rigidbody>();
     }

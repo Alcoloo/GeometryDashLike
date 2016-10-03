@@ -43,5 +43,6 @@ public class SpherePlayer : MonoBehaviour {
             jumped = true;
             rb.AddForce(jumpForce * transform.position.y, ForceMode.Impulse);
         }
+        print("Sphere");
     }
 }
