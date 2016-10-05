@@ -26,9 +26,10 @@ public class CubePlayer : MonoBehaviour {
     {
         if (col.gameObject.tag == "Floor") canJump = true;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
         transform.position = new Vector3 (parent.transform.position.x,transform.position.y,transform.position.z);
         bool down = Input.GetKeyDown(KeyCode.Space);
         rb.AddForce(gravity);
