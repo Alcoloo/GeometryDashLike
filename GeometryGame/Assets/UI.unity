@@ -199,7 +199,8 @@ Prefab:
       propertyPath: m_TagString
       value: LastChildStart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000013108008466, guid: 55d47e0571f9ad945911b4da591b73f5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 55d47e0571f9ad945911b4da591b73f5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &171593665
@@ -259,7 +260,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.5
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -284,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 171593665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.01, y: 18.82, z: -29.66}
+  m_LocalPosition: {x: 43, y: 18.82, z: -29.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -694,6 +695,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1417029551 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011953125172, guid: 55d47e0571f9ad945911b4da591b73f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1866129283}
+--- !u!114 &1417029556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417029551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff4b5980dfb6704cb6a0033c3abba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1451690595 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011537034226, guid: 62ef59d845405b149bb70a7c92d00377,
