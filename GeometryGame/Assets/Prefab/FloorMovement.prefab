@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000013837006558}
   - 114: {fileID: 114000012204449940}
   - 54: {fileID: 54000010635333256}
+  - 114: {fileID: 114000013367111908}
   m_Layer: 0
   m_Name: FloorMovement
   m_TagString: Floor
@@ -93,7 +94,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 2
   m_CollisionDetection: 0
 --- !u!65 &65000011468342920
 BoxCollider:
@@ -116,5 +117,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 574d8e63d27298c419c2a68777e990e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000013367111908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010385224710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff4b5980dfb6704cb6a0033c3abba14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

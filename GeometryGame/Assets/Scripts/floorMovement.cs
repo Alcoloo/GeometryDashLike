@@ -6,6 +6,7 @@ public class floorMovement : MonoBehaviour {
 	private float floorSpeed = 15;
 	private string popDirection;
 	private Rigidbody rb;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
