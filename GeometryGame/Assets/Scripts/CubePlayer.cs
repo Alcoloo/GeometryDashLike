@@ -22,6 +22,11 @@ public class CubePlayer : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
 	}
 
+    void OnEnable()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     void OnCollisionEnter (Collision col)
     {
         if (col.gameObject.tag == "Floor") canJump = true;

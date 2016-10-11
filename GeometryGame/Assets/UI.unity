@@ -763,6 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastChild: {fileID: 316646166}
   floor: {fileID: 1000010385224710, guid: ea5b772cc55fac9459ecfbf9e1e7911f, type: 2}
+  floors:
+  - {fileID: 1000010385224710, guid: ea5b772cc55fac9459ecfbf9e1e7911f, type: 2}
+  - {fileID: 1000013112048658, guid: da003e5d4c6c1c6408b8625264d2e514, type: 2}
   scrollingSpeed: 0.1
   deltaTime: 0
 --- !u!1 &1726006947

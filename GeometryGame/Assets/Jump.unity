@@ -501,6 +501,26 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010251889050, guid: 62ef59d845405b149bb70a7c92d00377,
+        type: 2}
+      propertyPath: currentForm
+      value: 
+      objectReference: {fileID: 1451690595}
+    - target: {fileID: 114000010251889050, guid: 62ef59d845405b149bb70a7c92d00377,
+        type: 2}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 1675080244}
+    - target: {fileID: 114000012871284086, guid: 62ef59d845405b149bb70a7c92d00377,
+        type: 2}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1245602594}
+    - target: {fileID: 114000011831536502, guid: 62ef59d845405b149bb70a7c92d00377,
+        type: 2}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1245602594}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ef59d845405b149bb70a7c92d00377, type: 2}
   m_IsPrefabParent: 0
