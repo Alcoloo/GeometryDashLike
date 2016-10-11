@@ -6,7 +6,7 @@ TagManager:
   tags:
   - LastChildStart
   - Floor
-  - score
+  - Score
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,9 @@ public class FloorSpawn : MonoBehaviour {
     private Vector3 lastChildPosition;
     private float posPlayer;
 	private float randomFloorPos;
+    private float randomFloor;
     public GameObject floor;
+    public GameObject[] floors;
     private GameObject newFloor;
     public float scrollingSpeed;
     public float deltaTime;
@@ -16,7 +18,7 @@ public class FloorSpawn : MonoBehaviour {
         lastChild = GameObject.FindWithTag("LastChildStart");
         lastChildPosition = lastChild.transform.position;
         posPlayer = GameObject.FindWithTag("Player").transform.position.x;
-        deltaTime = 8.0f/(scrollingSpeed*60);
+        deltaTime = 7.8f/(scrollingSpeed*60);
         StartCoroutine(DoSpawn());
     }
 	
@@ -42,6 +44,8 @@ public class FloorSpawn : MonoBehaviour {
 	void FloorRandomSpawn()
 	{
 		randomFloorPos = Mathf.Floor(Random.Range (0, 3));
+        randomFloor = Random.Range(0, floors.Length);
+        floor = floors[(int)randomFloor];
 		if(randomFloorPos == 0)
 		{
 			
