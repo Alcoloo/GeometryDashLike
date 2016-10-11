@@ -15,6 +15,8 @@ public class SpherePlayer : MonoBehaviour {
     public Vector3 gravity = new Vector3(0.0f, -9.81f, 0.0f);
     public Vector3 bouncing = new Vector3(0.0f, 10.0f, 0.0f);
 
+    public GameObject parent;
+
     public float coefJump;
 
     void Start () {
@@ -37,12 +39,12 @@ public class SpherePlayer : MonoBehaviour {
     void Update () {
         bool down = Input.GetKeyDown(KeyCode.Space);
         rb.AddForce(gravity);
+        transform.position = new Vector3(parent.transform.position.x, transform.position.y, transform.position.z);
         if (down && canJump)
         {
             canJump = false;
             jumped = true;
             rb.AddForce(jumpForce * transform.position.y, ForceMode.Impulse);
         }
-        print("Sphere");
     }
 }
